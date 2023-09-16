@@ -13,4 +13,4 @@
     })
 </script>
 
-<div id="map" bind:this={container} style="width:500px;height:400px;"></div>
+<div id="map" bind:this={container} style="width1300px;height:550px;"></div>
