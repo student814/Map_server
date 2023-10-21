@@ -92,8 +92,6 @@ export const GET: RequestHandler = async () => {
         '법정동지번코드': item.법정동지번코드,
     }));
 
-    window.postMessage(JSON.stringify(formattedData));
-
     return new Response(JSON.stringify(formattedData), {
         headers: {
             'Content-Type': 'application/json'
