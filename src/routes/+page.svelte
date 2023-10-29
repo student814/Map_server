@@ -16,10 +16,9 @@
         const response = await fetch("/api"); 
           if(response.ok) {
             const responseData = await response.text();
-            alert('실행?')
             if('ReactNativeWebView' in window){
               //@ts-ignore
-              window.ReactNativeWebView.postMessage(responseData, "*");
+              window.ReactNativeWebView.postMessage(responseData);
             }
           } else {
             console.log("error")
