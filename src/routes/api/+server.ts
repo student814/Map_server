@@ -46,13 +46,13 @@ export const GET: RequestHandler = async () => {
             도로명: elements[4] || "",
             도로명건물본번호코드: elements[5] || "",
             도로명건물부번호코드: elements[6] || "",
-            도로명시군구코드: parseInt(elements[7] || "", 10), // parseInt를 사용하여 문자열을 숫자로 변환
+            도로명시군구코드: parseInt(elements[7] || "", 10),
             도로명일련번호코드: elements[8] || "",
             도로명코드: elements[9] || "",
             법정동: elements[10] || "",
             법정동본번코드: elements[11] || "",
             법정동부번코드: elements[12] || "",
-            법정동시군구코드: parseInt(elements[13] || "", 10), // parseInt를 사용하여 문자열을 숫자로 변환
+            법정동시군구코드: parseInt(elements[13] || "", 10),
             법정동읍면동코드: elements[14] || "",
             법정동지번코드: elements[15] || "",
             아파트: elements[16] || "",
@@ -60,14 +60,14 @@ export const GET: RequestHandler = async () => {
             일: elements[18] || "",
             전용면적: elements[19] || "",
             지번: elements[20] || "",
-            지역코드: parseInt(elements[21] || "", 10), // parseInt를 사용하여 문자열을 숫자로 변환
+            지역코드: parseInt(elements[21] || "", 10),
             층: elements[22] || "",
         };
         
         return mappedData;
     });
 
-    const formattedData = data.map(item => ({
+    const formappedData = data.map(item => ({
         '지역코드': item.지역코드,
         '도로명': item.도로명,
         '법정동': item.법정동,
@@ -91,8 +91,8 @@ export const GET: RequestHandler = async () => {
         '법정동읍면동코드': item.법정동읍면동코드,
         '법정동지번코드': item.법정동지번코드,
     }));
-
-    return new Response(JSON.stringify(formattedData), {
+    
+    return new Response(JSON.stringify(formappedData), {
         headers: {
             'Content-Type': 'application/json'
         }
