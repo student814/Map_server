@@ -16,6 +16,7 @@
         const response = await fetch("/api"); 
           if(response.ok) {
             const responseData = await response.text();
+            console.log(JSON.parse(responseData));
             if('ReactNativeWebView' in window){
               //@ts-ignore
               window.ReactNativeWebView.postMessage(responseData);
