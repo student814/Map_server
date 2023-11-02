@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
   import { onMount } from "svelte";
   let container:HTMLDivElement; //지도
   onMount(async() => {
@@ -27,4 +27,4 @@
     });
 </script>
 
-<div id="map" bind:this={container} style="width:100%;height:100%;"></div>
+<div id="map" bind:this={container} style="width:100%;height:100%;"></div> -->
