@@ -1,4 +1,4 @@
-<!-- <script lang="ts">
+<script lang="ts">
   import { onMount } from "svelte";
   let container:HTMLDivElement; //지도
   onMount(async() => {
@@ -13,18 +13,18 @@
         map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
         map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
-        const response = await fetch("/api"); 
-          if(response.ok) {
-            const responseData = await response.text();
-            console.log(JSON.parse(responseData));
-            if('ReactNativeWebView' in window){
-              //@ts-ignore
-              window.ReactNativeWebView.postMessage(responseData);
-            }
-          } else {
-            console.log("error")
-          }
+        // const response = await fetch("/api"); 
+        //   if(response.ok) {
+        //     const responseData = await response.text();
+        //     console.log(JSON.parse(responseData));
+        //     if('ReactNativeWebView' in window){
+        //       //@ts-ignore
+        //       window.ReactNativeWebView.postMessage(responseData);
+        //     }
+        //   } else {
+        //     console.log("error")
+        //   }
     });
 </script>
 
-<div id="map" bind:this={container} style="width:100%;height:100%;"></div> -->
+<div id="map" bind:this={container} style="width:100%;height:100%;"></div>
